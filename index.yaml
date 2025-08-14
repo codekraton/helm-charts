@@ -2,17 +2,16 @@ apiVersion: v1
 entries:
   codekraton-kubernetes-dashboard:
   - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2025-08-14T10:23:03.837374+02:00"
+    created: "2025-08-14T20:19:57.118523+02:00"
     dependencies:
     - name: kubernetes-dashboard
-      repository: https://kubernetes.github.io/dashboard
-      version: 6.0.8
+      repository: https://kubernetes.github.io/dashboard/
+      version: 7.4.0
     description: A Codekraton Helm chart for a Kubernetes dashboard
-    digest: 619476754b2cac157899427f45ef980fa9b8c77287bff490e292aa68d4b11ee1
+    digest: 745be34359ab8d7c3dbce112952a1ce3b663607b0a45f1bc7670466b4f4688c7
     name: codekraton-kubernetes-dashboard
     type: application
     urls:
-    - https://thomask.github.io/helm-charts/codekraton-kubernetes-dashboard-0.0.1.tgz
-    version: 0.0.1
-generated: "2025-08-14T10:23:03.835846+02:00"
+    - https://codekraton.github.io/helm-charts/codekraton-kubernetes-dashboard-0.1.0.tgz
+    version: 0.1.0
+generated: "2025-08-14T20:19:57.117272+02:00"
