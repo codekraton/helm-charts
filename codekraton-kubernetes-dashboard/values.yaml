@@ -1,0 +1,16 @@
+kubernetes-dashboard:
+  ingress:
+    enabled: true
+    annotations:
+      kubernetes.io/ingress.class: nginx
+    hosts:
+      - dashboard.kubernetes.localhost
+    tls:
+      - hosts:
+          - dashboard.kubernetes.localhost
+        secretName: kubernetes-localhost-tls
+    extraArgs:
+      - "--enable-skip-login=true"
+    serviceAccount:
+      create: true
+      name: kubernetes-dashboard-sa

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "codekraton-kubernetes-dashboard.fullname" . }}-test-connection"
+  labels:
+    {{- include "codekraton-kubernetes-dashboard.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "codekraton-kubernetes-dashboard.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

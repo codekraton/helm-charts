@@ -2,6 +2,18 @@
 
 A Helm chart is a collection of files that describe a related set of Kubernetes resources. It enables easy packaging, configuration, and deployment of applications on Kubernetes.
 
+## Useful commands
+```bash
+# Create a new Helm chart
+helm create codekraton-kubernetes-dashboard
+
+# Package the chart into a .tgz file
+helm package codekraton-kubernetes-dashboard
+
+# Create an index file for the chart repository
+helm repo index . --url https://YOUR_USERNAME.github.io/REPONAME
+```
+
 ## Directory Structure
 
 ```
