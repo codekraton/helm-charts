@@ -10,25 +10,25 @@ helm create codekraton-kubernetes-dashboard
 # Package a chart into a .tgz file, also upgrades the chart version
 helm package codekraton-kubernetes-dashboard
 
-# Update the index file for the chart repository
+# Update the index file for the chart repository after creating and/or updating a chart
 helm repo index . --url https://codekraton.github.io/helm-charts/
 ```
 
-## Directory Structure
+## A Helm chart directory structure
 
 ```
 mychart/
     Chart.yaml            # Information about the chart
     values.yaml           # Default configuration values for the chart
     charts/               # Directory for dependent charts
-    templates/            # Kubernetes manifest templates
+    templates/            # Kubernetes manifest templates (optional)
         deployment.yaml   # Deployment resource template
         service.yaml      # Service resource template
-        ingress.yaml      # Ingress resource template (optional)
-        configmap.yaml    # ConfigMap resource template (optional)
+        ingress.yaml      # Ingress resource template
+        configmap.yaml    # ConfigMap resource template
 ``` 
 
-### Chart.yaml
+#### Chart.yaml
 
 - **Purpose:** Contains metadata about the chart.
 - **Structure:**  
@@ -49,7 +49,7 @@ appVersion: "1.0"
 # appVersion: Version of the application being deployed.
 ```
 
-### values.yaml
+#### values.yaml
 - **Purpose:** Contains default configuration values for the chart.
 - **Structure:**
 ```
