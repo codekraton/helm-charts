@@ -1,16 +1,16 @@
 kubernetes-dashboard:
+  serviceAccount:
+    # Create a service account for the dashboard named: kubernetes-dashboard-admin
+    create: true
+
+  extraArgs:
+    - --enable-skip-login
+    - --disable-settings-authorizer
+
   ingress:
     enabled: true
-    annotations:
-      kubernetes.io/ingress.class: nginx
+    className: nginx # Specify the NGINX ingress class
     hosts:
       - dashboard.kubernetes.localhost
-    tls:
-      - hosts:
-          - dashboard.kubernetes.localhost
-        secretName: kubernetes-localhost-tls
-    extraArgs:
-      - "--enable-skip-login=true"
-    serviceAccount:
-      create: true
-      name: kubernetes-dashboard-sa
+    annotations:
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTPS"
