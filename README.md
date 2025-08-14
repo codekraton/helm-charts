@@ -32,7 +32,8 @@ mychart/
 
 - **Purpose:** Contains metadata about the chart.
 - **Structure:**  
-```yaml
+
+```
 apiVersion: v2
 name: my-helm-chart
 type: application
@@ -51,7 +52,7 @@ appVersion: "1.0"
 ### values.yaml
 - **Purpose:** Contains default configuration values for the chart.
 - **Structure:**
-```yaml
+```
 replicaCount: 1
 image:
   repository: my-repo/my-image
