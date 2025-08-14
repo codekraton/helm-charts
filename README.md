@@ -1,6 +1,6 @@
-# Helm Chart Structure
+# helm-charts
 
-A Helm chart is a collection of files that describe a related set of Kubernetes resources. It enables easy packaging, configuration, and deployment of applications on Kubernetes.
+The Codekraton Helm chart repository
 
 ## Useful commands
 ```bash
