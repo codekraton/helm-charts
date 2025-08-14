@@ -19,6 +19,7 @@ A collection of Helm charts for Codekraton Kubernetes applications.
 
 Add this repo as a Helm repository:
 
-```sh
+```
 helm repo add codekraton https://codekraton.github.io/helm-charts/
 helm search repo codekraton
+```
