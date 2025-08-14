@@ -9,7 +9,7 @@ A collection of Helm charts for Codekraton Kubernetes applications.
 
 ## Available Charts
 
-- [codekraton-kubernetes-dashboard](https://thomask.github.io/helm-charts/codekraton-kubernetes-dashboard-0.0.1.tgz)
+- [codekraton-kubernetes-dashboard](https://codekraton.github.io/helm-charts/codekraton-kubernetes-dashboard-0.0.1.tgz)
     - Version: 0.0.1
     - Description: A Codekraton Helm chart for a Kubernetes dashboard
 
@@ -20,5 +20,5 @@ A collection of Helm charts for Codekraton Kubernetes applications.
 Add this repo as a Helm repository:
 
 ```sh
-helm repo add codekraton https://thomask.github.io/helm-charts/
+helm repo add codekraton https://codekraton.github.io/helm-charts/
 helm search repo codekraton
